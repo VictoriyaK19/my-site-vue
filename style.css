@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: "Jost", sans-serif;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  header {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    padding: 0.5rem;
+    background-color: #7362dd;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  h3 {
+    margin: 0;
+  }
+  
+  section {
+    color: white;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    border: 1px solid #ab4bc8;
+    margin: auto;
+    background: #7362dd;
+    border-radius: 12px;
+  }
+  input {
+    height: 3rem;
+    margin: 1rem;
+  }
+  .text {
+    font-size: x-large;
+    font-weight: bold;
+    padding: 1rem;
+  }
+  
+  button {
+    font: inherit;
+    border: 1px solid #9a15bb;
+    background-color: #ffffff;
+    color: #ab4bc8;
+    padding: 1rem;
+    border-radius: 12px;
+    margin: 1rem;
+    width: 12rem;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+  }
+  
+  button:focus {
+    outline: none;
+  }

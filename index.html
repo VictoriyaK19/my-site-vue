@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+    <title>Suprise</title>
+  </head>
+  
+  <body>
+    <header>
+      <h1>Хаййй!😊</h1>
+    </header>
+    <div id="game">
+      <section v-if="!isBored">
+        <label><h3 class="text">Готова ли си?</h3></label>
+        <button @click="changeToBored"><h3>Даа🤩</h3></button>
+        <button @click="changeToBored"><h3>За какво?🤔</h3></button>
+        <button @click="changeToBored">
+          <h3>Притеснявам се какво ме чака😬</h3>
+        </button>
+      </section>
+
+      <section v-if="isBored && !haveTime && !anotherTime">
+        <h3 class="text">Имаш ли 30 минутки да ми отделиш?</h3>
+        <button @click="changeHaveTime"><h3>Дам😊</h3></button>
+        <button @click="changeHaveTime"><h3>Даже и повече🥰</h3></button>
+        <button @click="anotherTime = true"><h3>Нямам😢</h3></button>
+      </section>
+
+      <section v-if="anotherTime">
+        <h3 class="text">Върни се отново, когато имаш свободно време😥</h3>
+      </section>
+
+      <section v-if="haveTime && !correctPassword">
+        <label><h3 class="text">Въведи паролата</h3></label>
+        <input
+          style="-webkit-text-security: circle"
+          type="text"
+          v-model="enteredPassword"
+        />
+        <button @click="checkCorrectPassword" class="text">Айда!</button>
+      </section>
+
+      <section v-if="correctPassword">
+        <iframe
+          src="https://drive.google.com/file/d/19vTsrKyLLLzZalbvOp6jizWA7bNMkBC9/preview"
+          width="640"
+          height="480"
+          allow="autoplay"
+        ></iframe>
+      </section>
+    </div>
+  </body>
+</html>
